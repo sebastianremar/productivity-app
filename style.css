@@ -55,7 +55,7 @@ ul li:hover a {
     display: none;
 }
 
-label #btn,label #cancel{
+label #btn,label #cancel {
     position: absolute;
     cursor: pointer;
     background: #042331;
