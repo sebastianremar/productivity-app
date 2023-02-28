@@ -1,28 +1,14 @@
-const input = document.getElementById('new-item');
-const addButton = document.getElementById('add-btn');
-const list = document.getElementById('list');
+var $content = $('.sidebar-menu');
 
-addButton.addEventListener('click', addItem);
-
-function addItem() {
-  const text = input.value.trim();
-
-  if (text !== '') {
-    const li = document.createElement('li');
-    li.textContent = text;
-    list.appendChild(li);
-    input.value = '';
-  }
+function showContent(selector) {
+  $content.hide();
+  $(selector).show();
 }
 
-input.addEventListener('keyup', function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    addButton.click();
-  }
-});
+$('.sidebar').on('click', '.sidebar-menu', function(e) {
+  showContent(e.currentTarget.hash);
+  e.preventDefault();
+}); 
 
-
-const removeItem = (list, itemToRemove) => {
-    list.removeChild(itemToRemove);
-}
+// show '#about' content only on page load (if you want)
+showContent('#management');
