@@ -4,6 +4,7 @@
     <title>To-Do List</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c00368863c.js" crossorigin="anonymous"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   </head>
   <body>
     <input type="checkbox" id="check">
@@ -14,15 +15,28 @@
     <div class="sidebar">
         <header>my app</header>
         <ul>
-          <li><a href="#"><i class="fas fa-qrcode"></i>Management</a></li>
-          <li><a href="#"><i class="fas fa-qrcode"></i>Pomodoro</a></li>
-          <li><a href="#"><i class="fas fa-qrcode"></i>Tasks</a></li>
-          <li><a href="#"><i class="fas fa-qrcode"></i>Schedule</a></li>
+          <li><a href="#"><i class="sidebar-menu"></i>Management</a></li>
+          <li><a href="#pomodoro-container"><i class="sidebar-menu"></i>Pomodoro</a></li>
+          <li><a href="#"><i class="sidebar-menu"></i>Tasks</a></li>
+          <li><a href="#"><i class="sidebar-menu"></i>Schedule</a></li>
         </ul>
       </div>
-      <section>
+    <section>
 
-      </section>
-
+    </section>
+        <div class="pomodoro-container">
+            <h1>Pomodoro Timer</h1>
+                <ul>
+                    <li id="pomodoro">25:00</li>
+                    <li id="short-break">05:00</li>
+                    <li id="long-break">15:00</li>
+                </ul>
+            <div class="buttons">
+                <button id="start">Start</button>
+                <button id="stop">Stop</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+        <script src="script.js"></script>
   </body>
 </html>
